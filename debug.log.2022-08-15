@@ -1,0 +1,61 @@
+INFO 2022-09-05 23:06:13,914 Watching for file changes with StatReloader
+INFO 2022-09-05 23:07:38,837 Watching for file changes with StatReloader
+INFO 2022-09-06 08:31:56,076 Watching for file changes with StatReloader
+INFO 2022-09-07 11:55:23,833 Watching for file changes with StatReloader
+WARNING 2022-09-07 11:55:52,124 Not Found: /home
+WARNING 2022-09-07 11:55:52,125 "GET /home HTTP/1.1" 404 6181
+INFO 2022-09-07 11:56:00,305 "GET / HTTP/1.1" 302 0
+INFO 2022-09-07 11:56:00,798 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+INFO 2022-09-07 11:56:04,816 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58578
+INFO 2022-09-07 11:56:04,821 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2022-09-07 11:56:04,883 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19724
+INFO 2022-09-07 11:56:05,098 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686707
+INFO 2022-09-07 11:56:05,472 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8610
+INFO 2022-09-07 11:56:06,212 "GET /static/dist/img/login.png HTTP/1.1" 200 144918
+INFO 2022-09-07 11:56:06,213 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88145
+INFO 2022-09-07 11:56:06,254 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13632
+INFO 2022-09-07 11:56:06,299 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80698
+INFO 2022-09-07 11:56:06,365 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5251
+INFO 2022-09-07 11:56:06,589 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42383
+INFO 2022-09-07 11:56:07,231 "GET /static/dist/js/demo.js HTTP/1.1" 200 12616
+INFO 2022-09-07 11:56:07,232 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 57530
+INFO 2022-09-07 11:56:09,815 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2022-09-07 11:56:25,278 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2022-09-07 11:56:25,429 "GET / HTTP/1.1" 200 9290
+INFO 2022-09-07 11:56:25,726 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25780
+INFO 2022-09-07 11:56:25,892 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042446
+INFO 2022-09-07 11:56:25,982 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13584
+INFO 2022-09-07 11:56:28,250 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-07 11:56:31,326 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2022-09-07 11:56:33,681 "GET /finance/list/ HTTP/1.1" 200 9925
+INFO 2022-09-07 11:56:36,546 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-07 11:56:39,522 "GET /student/create/ HTTP/1.1" 200 13579
+INFO 2022-09-07 11:57:21,347 "POST /student/create/ HTTP/1.1" 302 0
+INFO 2022-09-07 11:57:21,525 "GET /student/2/ HTTP/1.1" 200 11284
+INFO 2022-09-07 11:57:21,570 "GET /static/dist/img/avatar.png HTTP/1.1" 200 8543
+INFO 2022-09-07 11:57:31,137 "GET /student/2/ HTTP/1.1" 302 0
+INFO 2022-09-07 11:57:32,225 "GET /static/dist/css/adminlte.min.css.map HTTP/1.1" 200 2149167
+INFO 2022-09-07 11:57:32,379 "GET /accounts/login/?next=/student/2/ HTTP/1.1" 200 3991
+INFO 2022-09-07 11:58:22,619 "GET /result/create/ HTTP/1.1" 200 10771
+INFO 2022-09-07 11:58:31,471 "GET /session/list/ HTTP/1.1" 200 11598
+INFO 2022-09-07 11:58:37,517 "GET /session/list/ HTTP/1.1" 302 0
+INFO 2022-09-07 11:58:37,758 "GET /static/dist/css/adminlte.min.css.map HTTP/1.1" 304 0
+INFO 2022-09-07 11:58:38,376 "GET /accounts/login/?next=/session/list/ HTTP/1.1" 200 3994
+INFO 2022-09-07 11:58:54,016 "GET /site-config HTTP/1.1" 200 10862
+INFO 2022-09-07 11:59:00,202 "GET /session/list/ HTTP/1.1" 200 11598
+INFO 2022-09-07 11:59:03,934 "GET /term/list/ HTTP/1.1" 200 12231
+INFO 2022-09-07 11:59:08,287 "GET /term/2/update/ HTTP/1.1" 200 10149
+INFO 2022-09-07 11:59:13,196 "POST /term/2/update/ HTTP/1.1" 302 0
+INFO 2022-09-07 11:59:13,319 "GET /term/list/ HTTP/1.1" 200 12372
+INFO 2022-09-07 11:59:20,626 "GET /class/list/ HTTP/1.1" 200 11134
+INFO 2022-09-07 11:59:24,301 "GET /subject/list/ HTTP/1.1" 200 11397
+INFO 2022-09-07 11:59:28,167 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-07 11:59:30,288 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2022-09-07 11:59:32,721 "GET /finance/list/ HTTP/1.1" 200 9925
+INFO 2022-09-07 11:59:34,653 "GET /result/create/ HTTP/1.1" 200 10771
+INFO 2022-09-07 11:59:36,453 "GET /result/edit-results/ HTTP/1.1" 200 10104
+INFO 2022-09-07 11:59:38,229 "GET /result/view/all HTTP/1.1" 200 8834
+INFO 2022-09-07 11:59:40,406 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-07 12:00:43,871 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2022-09-07 12:00:43,882 "GET / HTTP/1.1" 302 0
+INFO 2022-09-07 12:00:43,908 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981

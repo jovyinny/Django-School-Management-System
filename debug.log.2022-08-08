@@ -1,0 +1,424 @@
+INFO 2022-09-03 12:24:59,467 Watching for file changes with StatReloader
+INFO 2022-09-03 21:16:20,005 Watching for file changes with StatReloader
+ERROR 2022-09-03 21:16:36,993 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: corecode_academicsession
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/jovine/Mutelani/Practice/Python/Library/Django-School-Management-System/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: corecode_academicsession
+ERROR 2022-09-03 21:16:37,093 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 233, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    if request.session.get_expire_at_browser_close():
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 325, in get_expire_at_browser_close
+    if self.get('_session_expiry') is None:
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 80, in get
+    return self._session.get(key, default)
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 238, in _get_session
+    self._session_cache = self.load()
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/db.py", line 43, in load
+    s = self._get_session_from_db()
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2022-09-03 21:16:37,095 "GET / HTTP/1.1" 500 161335
+ERROR 2022-09-03 21:16:37,720 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: corecode_academicsession
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/jovine/Mutelani/Practice/Python/Library/Django-School-Management-System/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: corecode_academicsession
+ERROR 2022-09-03 21:16:37,830 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 233, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    if request.session.get_expire_at_browser_close():
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 325, in get_expire_at_browser_close
+    if self.get('_session_expiry') is None:
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 80, in get
+    return self._session.get(key, default)
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 238, in _get_session
+    self._session_cache = self.load()
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/db.py", line 43, in load
+    s = self._get_session_from_db()
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2022-09-03 21:16:48,899 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: corecode_academicsession
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/media/jovine/Mutelani/Practice/Python/Library/Django-School-Management-System/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: corecode_academicsession
+ERROR 2022-09-03 21:16:48,951 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 233, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    if request.session.get_expire_at_browser_close():
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 325, in get_expire_at_browser_close
+    if self.get('_session_expiry') is None:
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 80, in get
+    return self._session.get(key, default)
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/base.py", line 238, in _get_session
+    self._session_cache = self.load()
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/db.py", line 43, in load
+    s = self._get_session_from_db()
+  File "/usr/lib/python3/dist-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 79, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2022-09-03 21:16:48,952 "GET / HTTP/1.1" 500 161335
+INFO 2022-09-03 21:18:11,565 Watching for file changes with StatReloader
+INFO 2022-09-03 21:18:15,225 "GET / HTTP/1.1" 302 0
+INFO 2022-09-03 21:18:15,312 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+INFO 2022-09-03 21:18:15,770 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2022-09-03 21:18:15,770 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19724
+INFO 2022-09-03 21:18:15,771 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8610
+INFO 2022-09-03 21:18:15,775 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5251
+INFO 2022-09-03 21:18:15,776 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13632
+INFO 2022-09-03 21:18:15,778 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58578
+INFO 2022-09-03 21:18:15,779 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88145
+INFO 2022-09-03 21:18:15,781 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42383
+INFO 2022-09-03 21:18:15,781 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80698
+INFO 2022-09-03 21:18:15,782 "GET /static/dist/js/demo.js HTTP/1.1" 200 12616
+INFO 2022-09-03 21:18:15,782 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 57530
+INFO 2022-09-03 21:18:17,180 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686707
+INFO 2022-09-03 21:18:20,324 "GET /static/dist/img/login.png HTTP/1.1" 200 144918
+INFO 2022-09-03 21:18:21,814 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2022-09-03 21:18:30,962 "POST /accounts/login/ HTTP/1.1" 200 4106
+WARNING 2022-09-03 21:18:31,127 Not Found: /favicon.ico
+WARNING 2022-09-03 21:18:40,099 Not Found: /admin/
+WARNING 2022-09-03 21:18:40,101 "GET /admin/ HTTP/1.1" 404 6187
+WARNING 2022-09-03 21:18:40,206 Not Found: /favicon.ico
+INFO 2022-09-03 21:18:48,669 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+INFO 2022-09-03 21:18:57,692 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:18:57,836 "GET / HTTP/1.1" 200 9290
+INFO 2022-09-03 21:18:57,912 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25780
+INFO 2022-09-03 21:18:57,924 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042446
+INFO 2022-09-03 21:18:58,123 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13584
+INFO 2022-09-03 21:19:06,255 "GET /student/list HTTP/1.1" 200 9946
+WARNING 2022-09-03 21:19:06,976 Not Found: /favicon.ico
+INFO 2022-09-03 21:19:12,241 "GET /finance/list/ HTTP/1.1" 200 9925
+WARNING 2022-09-03 21:19:12,784 Not Found: /favicon.ico
+INFO 2022-09-03 21:19:17,228 "GET /result/create/ HTTP/1.1" 200 10386
+WARNING 2022-09-03 21:19:17,782 Not Found: /favicon.ico
+INFO 2022-09-03 21:19:21,514 "GET /staff/list/ HTTP/1.1" 200 9687
+WARNING 2022-09-03 21:19:21,991 Not Found: /favicon.ico
+INFO 2022-09-03 21:19:28,922 "GET /site-config HTTP/1.1" 200 10862
+WARNING 2022-09-03 21:19:29,400 Not Found: /favicon.ico
+INFO 2022-09-03 21:19:58,774 "POST /site-config HTTP/1.1" 200 10888
+WARNING 2022-09-03 21:19:59,196 Not Found: /favicon.ico
+INFO 2022-09-03 21:20:02,607 "GET /current-session/ HTTP/1.1" 200 10518
+INFO 2022-09-03 21:20:19,188 "GET /session/create/?next=current-session/ HTTP/1.1" 200 10174
+INFO 2022-09-03 21:20:25,730 "GET /current-session/ HTTP/1.1" 200 10518
+WARNING 2022-09-03 21:20:26,417 Not Found: /favicon.ico
+INFO 2022-09-03 21:20:32,126 "GET /session/create/?next=current-session/ HTTP/1.1" 200 10174
+INFO 2022-09-03 21:20:47,530 "POST /session/create/?next=current-session/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:20:47,663 "GET /session/list/ HTTP/1.1" 200 12086
+WARNING 2022-09-03 21:20:48,145 Not Found: /favicon.ico
+INFO 2022-09-03 21:21:38,151 "GET /session/2/update/ HTTP/1.1" 200 10177
+WARNING 2022-09-03 21:21:38,617 Not Found: /favicon.ico
+WARNING 2022-09-03 21:21:40,494 Not Found: /favicon.ico
+INFO 2022-09-03 21:21:42,471 "GET /session/1/delete/ HTTP/1.1" 200 9989
+INFO 2022-09-03 21:21:44,838 "POST /session/1/delete/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:21:44,981 "GET /session/list/ HTTP/1.1" 200 11781
+INFO 2022-09-03 21:22:14,123 "GET /subject/list/ HTTP/1.1" 200 11397
+INFO 2022-09-03 21:22:30,204 "POST /subject/create/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:22:30,327 "GET /subject/list/ HTTP/1.1" 200 11827
+INFO 2022-09-03 21:22:36,469 "GET /class/list/ HTTP/1.1" 200 11410
+WARNING 2022-09-03 21:22:36,912 Not Found: /favicon.ico
+INFO 2022-09-03 21:22:39,556 "GET /class/1/delete/ HTTP/1.1" 200 9981
+WARNING 2022-09-03 21:22:40,011 Not Found: /favicon.ico
+INFO 2022-09-03 21:22:41,699 "POST /class/1/delete/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:22:41,810 "GET /class/list/ HTTP/1.1" 200 11308
+INFO 2022-09-03 21:22:51,939 "POST /class/create/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:22:52,072 "GET /class/list/ HTTP/1.1" 200 11556
+INFO 2022-09-03 21:22:54,494 "GET /class/2/delete/ HTTP/1.1" 200 9981
+INFO 2022-09-03 21:22:56,603 "POST /class/2/delete/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:22:56,714 "GET /class/list/ HTTP/1.1" 200 11311
+INFO 2022-09-03 21:22:59,413 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-03 21:23:04,333 "GET /student/create/ HTTP/1.1" 200 13579
+INFO 2022-09-03 21:26:04,005 "POST /student/create/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:26:04,161 "GET /student/1/ HTTP/1.1" 200 11329
+INFO 2022-09-03 21:26:04,483 "GET /media/students/passports/jovine_passp.jpg HTTP/1.1" 200 131899
+WARNING 2022-09-03 21:26:04,772 Not Found: /favicon.ico
+INFO 2022-09-03 21:26:16,027 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2022-09-03 21:26:23,941 "GET /result/view/all HTTP/1.1" 200 8834
+INFO 2022-09-03 21:26:27,329 "GET /result/edit-results/ HTTP/1.1" 200 10104
+INFO 2022-09-03 21:26:31,104 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:26:31,204 "GET /result/edit-results/ HTTP/1.1" 200 10247
+INFO 2022-09-03 21:26:44,265 "GET /result/create/ HTTP/1.1" 200 10583
+INFO 2022-09-03 21:26:50,084 "POST /result/create/ HTTP/1.1" 200 11058
+INFO 2022-09-03 21:26:57,458 "POST /result/create/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:26:57,603 "GET /result/edit-results/ HTTP/1.1" 200 12109
+INFO 2022-09-03 21:27:44,825 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:27:44,992 "GET /result/edit-results/ HTTP/1.1" 200 12264
+INFO 2022-09-03 21:27:52,644 "GET /result/edit-results/ HTTP/1.1" 200 12121
+INFO 2022-09-03 21:27:56,242 "GET /result/edit-results/ HTTP/1.1" 200 12121
+INFO 2022-09-03 21:27:58,553 "GET /result/view/all HTTP/1.1" 200 10308
+INFO 2022-09-03 21:28:10,370 "GET /result/view/all HTTP/1.1" 200 10308
+INFO 2022-09-03 21:28:12,214 "GET /result/edit-results/ HTTP/1.1" 200 12121
+INFO 2022-09-03 21:28:59,668 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:28:59,813 "GET /result/edit-results/ HTTP/1.1" 200 12261
+INFO 2022-09-03 21:29:04,622 "GET /result/view/all HTTP/1.1" 200 10304
+INFO 2022-09-03 21:29:11,452 "GET /site-config HTTP/1.1" 200 10862
+INFO 2022-09-03 21:29:44,836 "POST /site-config HTTP/1.1" 200 10883
+INFO 2022-09-03 21:29:47,475 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-03 21:29:49,895 "GET / HTTP/1.1" 200 9290
+INFO 2022-09-03 21:30:32,482 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-03 21:30:38,135 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-03 21:30:41,988 "GET /result/create/ HTTP/1.1" 200 10583
+INFO 2022-09-03 21:30:45,387 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-03 21:31:10,796 "GET /result/edit-results/ HTTP/1.1" 200 12118
+INFO 2022-09-03 21:31:12,641 "GET /result/view/all HTTP/1.1" 200 10304
+INFO 2022-09-03 21:31:18,305 "GET /class/list/ HTTP/1.1" 200 11134
+INFO 2022-09-03 21:31:23,191 "GET /subject/list/ HTTP/1.1" 200 11682
+INFO 2022-09-03 21:31:29,199 "GET /subject/2/delete/ HTTP/1.1" 200 9985
+INFO 2022-09-03 21:31:31,287 "POST /subject/2/delete/ HTTP/1.1" 302 0
+INFO 2022-09-03 21:31:31,398 "GET /subject/list/ HTTP/1.1" 200 11578
+INFO 2022-09-03 21:31:37,484 "GET /result/edit-results/ HTTP/1.1" 200 11448
+INFO 2022-09-03 21:31:41,505 "GET /student/list HTTP/1.1" 200 9946
+INFO 2022-09-03 21:32:03,094 "GET /student/list HTTP/1.1" 200 9946
